@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Planet">
         <activity
-            android:name=".Character"
+            android:name=".main_act"
             android:exported="true" />
     </application>
 
