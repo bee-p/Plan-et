@@ -3,11 +3,11 @@
     <item
         android:id="@+id/item_calender"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_calender_test"
-        android:title="캘린더" />
+        android:icon="@drawable/calendar_menu"
+        android:title="일정관리" />
     <item
         android:id="@+id/item_character"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_character_test"
-        android:title="캐릭터" />
+        android:icon="@drawable/character_menu"
+        android:title="캐릭터&amp;통계" />
 </menu>

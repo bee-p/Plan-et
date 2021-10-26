@@ -4,50 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_200"
     tools:context=".Character">
 
     <LinearLayout
-        android:layout_width="421dp"
-        android:layout_height="663dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8683D1"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="3dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="63dp"
+            android:layout_height="60dp"
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="144dp"
+                android:id="@+id/homeButton"
+                android:layout_width="84dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/ic_launcher_foreground" />
+                android:scaleType="fitCenter"
+                android:paddingVertical="16dp"
+                android:paddingHorizontal="16dp"
+                android:contentDescription="@string/temp"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/home" />
 
             <Space
-                android:layout_width="196dp"
+                android:layout_width="159dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
 
             <ImageButton
-                android:id="@+id/imageButton2"
-                app:srcCompat="@drawable/ic_launcher_foreground"
-                android:layout_width="169dp"
+                android:id="@+id/challengeButton"
+                android:layout_width="160dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:paddingVertical="16dp"
+                android:contentDescription="@string/temp"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/challenge21_text" />
 
             <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="wrap_content"
+                android:id="@+id/preferenceButton"
+                android:layout_width="84dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/ic_launcher_foreground" />
+                android:scaleType="fitCenter"
+                android:paddingVertical="15dp"
+                android:paddingHorizontal="16dp"
+                android:layout_marginRight="5dp"
+                android:contentDescription="@string/temp"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/preference" />
         </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="27dp" />
+            android:layout_height="16dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,22 +79,42 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="179dp"
+                android:layout_width="238dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="TextView" />
 
             <Space
-                android:layout_width="85dp"
+                android:layout_width="86dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
 
-            <ImageButton
-                android:id="@+id/imageButton4"
-                app:srcCompat="@drawable/ic_launcher_foreground"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="134dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/statButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/temp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/statistics" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="통계" />
+            </LinearLayout>
+
         </LinearLayout>
 
         <Space
@@ -90,14 +133,21 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
+            android:layout_width="215dp"
             android:layout_height="200dp"
-            app:srcCompat="@drawable/ic_launcher_foreground" />
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/earth" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="24dp" />
+            android:layout_height="75dp" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            app:menu="@menu/menu_resource_file"
+            android:layout_width="match_parent"
+            android:layout_height="82dp" />
 
 
     </LinearLayout>
+
 </FrameLayout>

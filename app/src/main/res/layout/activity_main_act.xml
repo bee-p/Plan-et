@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
-        app:labelVisibilityMode="unlabeled"
         app:menu="@menu/menu_resource_file">
 
         <FrameLayout
