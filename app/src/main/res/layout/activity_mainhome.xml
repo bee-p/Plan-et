@@ -1,0 +1,128 @@
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	<!--
+    /*
+     *	This content is generated from the API File Info.
+     *	(Alt+Shift+Ctrl+I).
+     *
+     *	@desc
+     *	@file 		activity_mainhome
+     *	@date 		1635421810448
+     *	@title 		Page 1
+     *	@author
+     *	@keywords
+     *	@generator 	Export Kit v1.3.figma
+     *
+     */
+    -->
+	<ScrollView
+		android:id="@+id/activity_mainhome"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent">
+
+		<RelativeLayout
+			android:id="@+id/content_container"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+
+			<View
+				android:id="@+id/_bg__main_home"
+				android:layout_width="360dp"
+				android:layout_height="640dp"
+				android:layout_marginStart="0dp"
+				android:layout_marginTop="0dp"
+				android:background="@drawable/_bg__main_home_shape" />
+
+			<ImageView
+				android:id="@+id/main_background_img"
+				android:layout_width="360dp"
+				android:layout_height="640dp"
+				android:layout_marginStart="0dp"
+				android:layout_marginTop="0dp"
+				android:contentDescription="main_background_img"
+				android:src="@drawable/main_background_img" />
+
+
+			<RelativeLayout
+				android:id="@+id/mainhome_slogon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="18dp"
+				android:layout_marginTop="108dp">
+
+				<TextView
+					android:id="@+id/________________"
+					android:layout_width="360dp"
+					android:layout_height="67dp"
+					android:layout_marginLeft="0dp"
+					android:layout_marginTop="0dp"
+					android:fontFamily="HYkanB"
+					android:text="@string/_________________string"
+					android:textColor="@color/_________________color"
+					android:textSize="24sp" />
+
+				<ImageView
+					android:id="@+id/__________1"
+					android:layout_width="38dp"
+					android:layout_height="23dp"
+					android:layout_marginStart="256dp"
+					android:layout_marginTop="9dp"
+					android:contentDescription="__________1"
+					android:src="@drawable/__________1" />
+
+			</RelativeLayout>
+
+
+			<RelativeLayout
+				android:id="@+id/mainhome_startbutton"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="224dp"
+				android:layout_marginTop="560dp">
+
+			</RelativeLayout>
+
+
+			<RelativeLayout
+				android:id="@+id/home_ch_motion_area"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="30dp"
+				android:layout_marginTop="233dp">
+
+				<ImageView
+					android:id="@+id/mainhome_ch2"
+					android:layout_width="218dp"
+					android:layout_height="231dp"
+					android:layout_marginStart="41dp"
+					android:layout_marginTop="40dp"
+					android:contentDescription="mainhome_ch2"
+					android:src="@drawable/mainhome_ch2" />
+
+
+				<RelativeLayout
+					android:id="@+id/homech_toucharea"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="90dp"
+					android:layout_marginTop="90dp">
+
+					<ImageView
+						android:id="@+id/___________2"
+						android:layout_width="117dp"
+						android:layout_height="87dp"
+						android:layout_marginStart="1dp"
+						android:layout_marginTop="16dp"
+						android:contentDescription="___________2"
+						android:src="@drawable/___________2" />
+
+				</RelativeLayout>
+
+			</RelativeLayout>
+
+		</RelativeLayout>
+
+	</ScrollView>
+</HorizontalScrollView>
