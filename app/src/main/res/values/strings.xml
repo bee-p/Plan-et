@@ -3,6 +3,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="temp">temp</string>
     <!-- activity_mainhome strings -->
+    <string name="text_mainho">나를 \n중심으로 도는 일정관리</string>
 
 
 
