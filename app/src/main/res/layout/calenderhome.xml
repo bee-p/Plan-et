@@ -32,7 +32,7 @@
 
             <Button
                 android:id="@+id/ch21_button"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
@@ -56,8 +56,8 @@
             <ScrollView
 
                 android:layout_width="wrap_content"
-                android:layout_height="590dp"
-                android:layout_marginTop="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="59dp"
                 android:clipToOutline="true">
 
                 <ImageView
@@ -67,16 +67,39 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="0dp"
-                    android:layout_marginTop="-692dp"
+                    android:layout_marginTop="-750dp"
                     android:clipToOutline="true"
 
                     app:srcCompat="@drawable/calender_mid" />
             </ScrollView>
+
         </FrameLayout>
 
     </LinearLayout>
 
 
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".main_act">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            app:menu="@menu/menu_resource_file">
+
+            <FrameLayout
+                android:id="@+id/main_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </RelativeLayout>
 
 
 </FrameLayout>
