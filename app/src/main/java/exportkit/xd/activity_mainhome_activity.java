@@ -39,7 +39,7 @@ public class activity_mainhome_activity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_mainhome);
+		setContentView(R.layout.activity_main);
 
 		
 		_bg__main_home = (View) findViewById(R.id._bg__main_home);
