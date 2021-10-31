@@ -66,7 +66,7 @@
                 android:scaleType="fitCenter"
                 android:paddingVertical="15dp"
                 android:paddingHorizontal="16dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="2dp"
                 android:contentDescription="@string/temp"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/preference" />
@@ -80,7 +80,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="16dp" />
+            android:layout_height="29dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -113,7 +113,7 @@
                     android:background="@android:color/transparent"
                     android:contentDescription="@string/temp"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/statistics" />
+                    app:srcCompat="@drawable/statistics_2" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -153,9 +153,13 @@
             android:layout_height="75dp" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            app:menu="@menu/menu_resource_file"
+            android:theme="@style/Widget.BottomNavigationView"
             android:layout_width="match_parent"
-            android:layout_height="82dp" />
+            android:layout_height="67dp"
+            app:menu="@menu/menu_resource_file"
+            app:backgroundTint="@color/black"
+            app:itemIconTint="@drawable/menu_selector_color"
+            app:itemTextColor="@drawable/menu_selector_color" />
 
 
     </LinearLayout>
