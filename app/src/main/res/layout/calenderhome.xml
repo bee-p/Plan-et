@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
 
+    >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -52,48 +53,71 @@
 
                 android:background="#00ff0000" />
 
-
-            <ScrollView
-
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="59dp"
-                android:clipToOutline="true">
+                android:layout_height="700dp">
 
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="500dp"
+
+                <ScrollView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="59dp"
+
+                    >
+
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="500dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="-260dp"
+                        android:clipToOutline="true"
+
+                        app:srcCompat="@drawable/calender_mid" />
+
+
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginTop="-750dp"
-                    android:clipToOutline="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="60dp"
 
-                    app:srcCompat="@drawable/calender_mid" />
-            </ScrollView>
 
+                    android:textColor="#000000"
+                    android:textSize="40sp">
+
+                </TextView>
+
+                <CalendarView
+                    android:id="@+id/qweqwe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="120dp" />
+
+                <Button
+
+                    android:id="@+id/calenderhome_addchecklist"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="320dp"
+                    android:layout_marginTop="530dp"
+
+                    android:background="#00ff0000" />
+
+
+            </RelativeLayout>
         </FrameLayout>
-
-    </LinearLayout>
-    <Button
-
-        android:id="@+id/calenderhome_addchecklist"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="320dp"
-        android:layout_marginTop="530dp"
-
-        android:background="#00ff0000" />
-
-
-
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".main_act">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavi"
