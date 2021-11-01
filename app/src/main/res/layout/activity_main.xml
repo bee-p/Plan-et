@@ -94,8 +94,8 @@
         android:layout_height="55dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="224dp"
-        android:layout_marginTop="560dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="603dp"
         android:background="@drawable/mainhome_start_button"
         android:contentDescription="TODO" />
 

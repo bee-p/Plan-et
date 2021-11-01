@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- add_memo -->
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/add_memo"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipToOutline="true"
+    android:background="@drawable/add_memo"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:background="#00ff0000"
+            android:clipToOutline="true" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="345dp"
+            android:layout_marginTop="14dp"
+            android:background="#00ff0000"
+            android:clipToOutline="true"
+
+            />
+        // 사용자 입력을 받아서 써지는 영역을 텍스트 뷰로 해야할지 뭘로 해야할지 몰라서 일단 놔두었습니다.
+
+
+    </FrameLayout>
+</RelativeLayout>
