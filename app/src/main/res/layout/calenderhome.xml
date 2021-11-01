@@ -97,15 +97,15 @@
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavi"
-            android:theme="@style/Widget.BottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="0dp"
-            app:menu="@menu/menu_resource_file"
+            android:theme="@style/Widget.BottomNavigationView"
             app:backgroundTint="@color/black"
             app:itemIconTint="@drawable/menu_selector_color"
-            app:itemTextColor="@drawable/menu_selector_color" />
+            app:itemTextColor="@drawable/menu_selector_color"
+            app:menu="@menu/menu_resource_file" />
 
     </RelativeLayout>
 
