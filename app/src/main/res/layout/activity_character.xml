@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_background_img"
-
     tools:context=".Character">
 
     <LinearLayout
@@ -67,13 +66,13 @@
             android:id="@+id/progressBar"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="49dp"
             android:layout_marginLeft="21dp"
-            android:layout_marginRight="136dp"
+            android:layout_marginRight="115dp"
             android:paddingVertical="10dp"
             android:indeterminate="false"
             android:max="100"
-            android:progress="70"
+            android:progress="90"
             android:progressDrawable="@drawable/progressbar_design" />
 
         <Space
@@ -82,7 +81,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="103dp"
+            android:layout_height="91dp"
             android:orientation="horizontal">
 
             <TextView
@@ -90,6 +89,9 @@
                 android:layout_width="238dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:paddingLeft="25dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
                 android:text="TextView" />
 
             <Space
@@ -127,12 +129,14 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="32dp" />
+            android:layout_height="43dp" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="55dp"
+            android:gravity="center"
+            android:textColor="@color/white"
             android:text="TextView" />
 
         <Space
@@ -162,4 +166,4 @@
 
     </LinearLayout>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

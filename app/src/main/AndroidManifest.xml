@@ -9,16 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Planet">
-        <!-- 메인 화면-->
-        <activity android:name=".Splashscreen"
-            android:label="@string/app_name"
-            android:exported="false">
-            <!--어플이 실행될때 가장 먼저 실행하도록 하는 코드-->
-           <intent-filter>
-               <action android:name="android.intent.action.MAIN"/>
+        <activity
+            android:name=".test"
+            android:exported="true" />
+        <!-- 메인 화면 -->
+        <activity
+            android:name=".Splashscreen"
+            android:exported="false"
+            android:label="@string/app_name">
 
-               <category android:name="android.intent.category.LAUNCHER"/>
-           </intent-filter>
+            <!-- 어플이 실행될때 가장 먼저 실행하도록 하는 코드 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".main_act"
