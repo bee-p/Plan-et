@@ -30,7 +30,7 @@ public class Calender extends AppCompatActivity {
         today =findViewById(R.id.today);
         calenderView =findViewById(R.id.qweqwe);
         //날짜 변환
-        DateFormat formatter= new SimpleDateFormat("yyyy녀MM월dd일");
+        DateFormat formatter= new SimpleDateFormat("yyyy년MM월dd일");
         Date date =new Date(calenderView.getDate());
 
         today.setText(formatter.format(date));
