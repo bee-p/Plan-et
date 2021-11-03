@@ -15,6 +15,7 @@
         android:orientation="vertical"
         >
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -49,12 +50,20 @@
             android:layout_height="20dp">
 
         </Space>
-
-        <Button
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="0dp"
-            android:background="#00ff0000" />
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="-4dp"
+                android:background="#00ff0000"
+                android:layout_alignParentTop="true"
+
+
+                />
+        </RelativeLayout>
         <Space
             android:layout_width="match_parent"
             android:layout_height="45dp"/>
@@ -98,7 +107,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="58dp"
-                android:layout_weight="1"
+                android:layout_weight="2"
            />
         </LinearLayout>
         <LinearLayout

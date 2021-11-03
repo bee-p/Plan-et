@@ -11,17 +11,14 @@
         android:theme="@style/Theme.Planet">
 
           <activity android:name=".splash" android:exported="true" >
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-
-            </intent-filter>
+              <intent-filter>
+                    <action android:name="android.intent.action.MAIN"/>
+                 <category android:name="android.intent.category.LAUNCHER"/>
+              </intent-filter>
           </activity>
 
-
-
-    <activity android:name=".Add_schedule"/>
+        <activity android:name=".mainhome"/>
+        <activity android:name=".Add_schedule"/>
     </application>
 
 </manifest>
