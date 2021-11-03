@@ -161,7 +161,29 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/diaryTextView" />
+
+
+                    <ImageButton
+
+
+                        android:id="@+id/checkbox1"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:background="#00ff0000"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/contextEditText"
+                        app:layout_constraintTop_toBottomOf="@+id/diaryTextView"
+                        app:srcCompat="@drawable/checkbox_no" />
+
+
                     <TextView
+
                         android:id="@+id/textView2"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
@@ -189,18 +211,24 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/cha_Btn" />
-                    <TextView
-                        android:id="@+id/contextEditText"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="70dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="90dp"
-                        android:inputType="textMultiLine"
-                        android:visibility="invisible"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/diaryTextView" />
+
+                    <ImageButton
+
+
+                        android:id="@+id/checkbox2"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="65dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:background="#00ff0000"
+                        app:layout_constraintRight_toLeftOf="@id/contextEditText2"
+                        app:layout_constraintTop_toBottomOf="@id/checkbox1"
+                      app:layout_constraintBottom_toTopOf="@id/cha_Btn2"
+                        app:srcCompat="@drawable/checkbox_no" />
 
 
                     <TextView
@@ -217,22 +245,20 @@
                         app:layout_constraintTop_toBottomOf="@+id/cha_Btn" />
 
 
-
-
                     <!--                    <EditText-->
-<!--                        android:id="@+id/contextEditText3"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="40dp"-->
-<!--                        android:layout_marginStart="70dp"-->
-<!--                        android:layout_marginTop="8dp"-->
-<!--                        android:layout_marginEnd="90dp"-->
-<!--                        android:ems="10"-->
-<!--                        android:hint="일정을 추가하세요"-->
-<!--                        android:inputType="textMultiLine"-->
-<!--                        android:visibility="invisible"-->
-<!--                        app:layout_constraintEnd_toEndOf="parent"-->
-<!--                        app:layout_constraintStart_toStartOf="parent"-->
-<!--                        app:layout_constraintTop_toBottomOf="@+id/cha_Btn2" />-->
+                    <!--                        android:id="@+id/contextEditText3"-->
+                    <!--                        android:layout_width="0dp"-->
+                    <!--                        android:layout_height="40dp"-->
+                    <!--                        android:layout_marginStart="70dp"-->
+                    <!--                        android:layout_marginTop="8dp"-->
+                    <!--                        android:layout_marginEnd="90dp"-->
+                    <!--                        android:ems="10"-->
+                    <!--                        android:hint="일정을 추가하세요"-->
+                    <!--                        android:inputType="textMultiLine"-->
+                    <!--                        android:visibility="invisible"-->
+                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                        app:layout_constraintTop_toBottomOf="@+id/cha_Btn2" />-->
 
 
                     <Button
@@ -240,11 +266,8 @@
                         android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="30dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginBottom="20dp"
                         android:text="저장"
                         android:visibility="invisible"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -257,7 +280,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="60dp"
-                     android:layout_marginTop="8dp"
+                        android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
 
                         android:text="수정"
@@ -325,59 +348,124 @@
                         app:layout_constraintBaseline_toBaselineOf="@+id/cha_Btn2"
                         app:layout_constraintEnd_toEndOf="@+id/save_Btn2" />
 
-<!--                    <Button-->
-<!--                        android:id="@+id/save_Btn3"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="40dp"-->
-<!--                        android:layout_marginStart="8dp"-->
-<!--                        android:layout_marginLeft="8dp"-->
-<!--                        android:layout_marginTop="16dp"-->
-<!--                        android:layout_marginEnd="30dp"-->
-<!--                        android:layout_marginRight="8dp"-->
-<!--                        android:layout_marginBottom="0dp"-->
-<!--                        android:text="저장"-->
-<!--                        android:visibility="invisible"-->
-<!--                        app:layout_constraintBottom_toBottomOf="@+id/contextEditText3"-->
-<!--                        app:layout_constraintEnd_toEndOf="parent"-->
-<!--                        app:layout_constraintStart_toEndOf="@+id/contextEditText3" />-->
+                    <!--                    <Button-->
+                    <!--                        android:id="@+id/save_Btn3"-->
+                    <!--                        android:layout_width="0dp"-->
+                    <!--                        android:layout_height="40dp"-->
+                    <!--                        android:layout_marginStart="8dp"-->
+                    <!--                        android:layout_marginLeft="8dp"-->
+                    <!--                        android:layout_marginTop="16dp"-->
+                    <!--                        android:layout_marginEnd="30dp"-->
+                    <!--                        android:layout_marginRight="8dp"-->
+                    <!--                        android:layout_marginBottom="0dp"-->
+                    <!--                        android:text="저장"-->
+                    <!--                        android:visibility="invisible"-->
+                    <!--                        app:layout_constraintBottom_toBottomOf="@+id/contextEditText3"-->
+                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                        app:layout_constraintStart_toEndOf="@+id/contextEditText3" />-->
 
-<!--                    <Button-->
-<!--                        android:id="@+id/cha_Btn3"-->
-<!--                        android:layout_width="180dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginStart="60dp"-->
-<!--                        android:layout_marginLeft="8dp"-->
-<!--                        android:layout_marginEnd="8dp"-->
-<!--                        android:layout_marginRight="8dp"-->
-<!--                        android:text="수정"-->
-<!--                        android:visibility="invisible"-->
-<!--                        app:layout_constraintEnd_toStartOf="@+id/del_Btn3"-->
-<!--                        app:layout_constraintStart_toStartOf="parent"-->
-<!--                        app:layout_constraintTop_toBottomOf="@+id/save_Btn3" />-->
+                    <!--                    <Button-->
+                    <!--                        android:id="@+id/cha_Btn3"-->
+                    <!--                        android:layout_width="180dp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginStart="60dp"-->
+                    <!--                        android:layout_marginLeft="8dp"-->
+                    <!--                        android:layout_marginEnd="8dp"-->
+                    <!--                        android:layout_marginRight="8dp"-->
+                    <!--                        android:text="수정"-->
+                    <!--                        android:visibility="invisible"-->
+                    <!--                        app:layout_constraintEnd_toStartOf="@+id/del_Btn3"-->
+                    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                        app:layout_constraintTop_toBottomOf="@+id/save_Btn3" />-->
 
-<!--                    <Button-->
-<!--                        android:id="@+id/del_Btn3"-->
-<!--                        android:layout_width="176dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginEnd="8dp"-->
-<!--                        android:layout_marginRight="8dp"-->
-<!--                        android:text="삭제"-->
-<!--                        android:visibility="invisible"-->
-<!--                        app:layout_constraintBaseline_toBaselineOf="@+id/cha_Btn3"-->
-<!--                        app:layout_constraintEnd_toEndOf="@+id/save_Btn3" />-->
+                    <!--                    <Button-->
+                    <!--                        android:id="@+id/del_Btn3"-->
+                    <!--                        android:layout_width="176dp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginEnd="8dp"-->
+                    <!--                        android:layout_marginRight="8dp"-->
+                    <!--                        android:text="삭제"-->
+                    <!--                        android:visibility="invisible"-->
+                    <!--                        app:layout_constraintBaseline_toBaselineOf="@+id/cha_Btn3"-->
+                    <!--                        app:layout_constraintEnd_toEndOf="@+id/save_Btn3" />-->
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <Button
-
-                    android:id="@+id/add_schedule"
-                    android:layout_width="44dp"
-                    android:layout_height="wrap_content"
+                <EditText
+                    android:id="@+id/checklist1"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
                     android:layout_alignParentTop="true"
-                    android:layout_marginLeft="325dp"
-                    android:layout_marginTop="460dp"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="825dp"
+                    android:ems="10"
+                    android:hint="체크리스트"
+                    android:inputType="textMultiLine"
+                    android:visibility="invisible" />
+                <TextView
+                    android:id="@+id/checklist_text1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="825dp"
+                    android:ems="10"
+                    />
 
-                    android:background="#00ff0000" />
+                <ImageButton
+
+
+                    android:id="@+id/checklist_checkbox1"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="835dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:background="#00ff0000"
+
+                    app:srcCompat="@drawable/checkbox_no" />
+
+                <EditText
+                    android:id="@+id/checklist2"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="870dp"
+                    android:ems="10"
+                    android:hint="체크리스트"
+                    android:inputType="textMultiLine"
+                    android:visibility="invisible"
+                   />
+                <TextView
+                    android:id="@+id/checklist_text2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="870dp"
+                    android:ems="10"
+                    />
+
+                <ImageButton
+
+
+                    android:id="@+id/checklist_checkbox2"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="880dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:background="#00ff0000"
+
+                    app:srcCompat="@drawable/checkbox_no" />
+
 
                 <Button
 

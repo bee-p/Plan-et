@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,14 +20,16 @@ public class Calendar extends AppCompatActivity
     public String readDay = null;
     public String str = null;
     public String str2 = null;
+    public String str3 = null;
+    public String str4 = null;
     public CalendarView calendarView;
     public Button cha_Btn, del_Btn, save_Btn;
     public Button cha_Btn2, del_Btn2, save_Btn2;
 
 
-    public TextView diaryTextView, textView2,textView3 ;
-    public EditText contextEditText,contextEditText2;
-
+    public TextView diaryTextView, textView2,textView3 ,checklist_text1,checklist_text2;
+    public EditText contextEditText,contextEditText2,checklist1,checklist2;
+    public ImageButton button ,button2,button3,button4;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -44,10 +47,32 @@ public class Calendar extends AppCompatActivity
 
         textView2 = findViewById(R.id.textView2);
         textView3 = findViewById(R.id.textView3);
-
-
+        //체크박스 버튼
+        button= (ImageButton)findViewById(R.id.checkbox1);
+        button2= (ImageButton)findViewById(R.id.checkbox2);
+        button.setOnClickListener(imgButtonHandler);
+        button2.setOnClickListener(imgButtonHandler2);
         contextEditText = findViewById(R.id.contextEditText);
         contextEditText2 = findViewById(R.id.contextEditText2);
+
+        //체크리스트
+        button3= (ImageButton)findViewById(R.id.checklist_checkbox1);
+        button4= (ImageButton)findViewById(R.id.checklist_checkbox2);
+        button3.setOnClickListener(imgButtonHandler3);
+        button4.setOnClickListener(imgButtonHandler4);
+        checklist1= findViewById(R.id.checklist1);
+        checklist2 = findViewById(R.id.checklist2);
+        checklist_text1= findViewById(R.id.checklist_text1);
+        checklist_text2 = findViewById(R.id.checklist_text2);
+
+
+
+
+
+
+
+
+
 
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener()
@@ -66,12 +91,24 @@ public class Calendar extends AppCompatActivity
                 textView3.setVisibility(View.INVISIBLE);
                 cha_Btn2.setVisibility(View.INVISIBLE);
                 del_Btn2.setVisibility(View.INVISIBLE);
+
+                //체크리스트
+                checklist1.setVisibility(View.VISIBLE);
+                checklist2.setVisibility(View.VISIBLE);
                 diaryTextView.setText(String.format("%d / %d / %d", year, month + 1, dayOfMonth));
                 contextEditText.setText("");
                 contextEditText2.setText("");
+                checklist1.setText("");
+                checklist2.setText("");
+
+
+
                 checkDay(year, month, dayOfMonth);
             }
         });
+
+
+
         save_Btn.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -105,6 +142,39 @@ public class Calendar extends AppCompatActivity
             }
         });
     }
+
+    View.OnClickListener imgButtonHandler = new View.OnClickListener() {
+
+        public void onClick(View v) {
+            button.setBackgroundResource(R.drawable.checkbox_com);
+
+        }
+    };
+    View.OnClickListener imgButtonHandler2 = new View.OnClickListener() {
+
+        public void onClick(View v) {
+            button2.setBackgroundResource(R.drawable.checkbox_com);
+
+        }
+    };
+
+
+    View.OnClickListener imgButtonHandler3 = new View.OnClickListener() {
+
+        public void onClick(View v) {
+            button3.setBackgroundResource(R.drawable.checkbox_com);
+
+        }
+    };
+
+    View.OnClickListener imgButtonHandler4 = new View.OnClickListener() {
+
+        public void onClick(View v) {
+            button4.setBackgroundResource(R.drawable.checkbox_com);
+
+        }
+    };
+
 
     public void checkDay(int cYear, int cMonth, int cDay)
     {
@@ -241,12 +311,18 @@ public class Calendar extends AppCompatActivity
     public void removeDiary(String readDay)
     {
         FileOutputStream fos;
+        FileOutputStream fos2;
+
         try
         {
             fos = openFileOutput(readDay, MODE_NO_LOCALIZED_COLLATORS);
             String content = "";
             fos.write((content).getBytes());
             fos.close();
+            fos2 = openFileOutput(readDay, MODE_NO_LOCALIZED_COLLATORS);
+            String content2 = "";
+            fos2.write((content2).getBytes());
+            fos2.close();
 
         }
         catch (Exception e)
@@ -259,12 +335,17 @@ public class Calendar extends AppCompatActivity
     public void saveDiary(String readDay)
     {
         FileOutputStream fos;
+        FileOutputStream fos2;
         try
         {
             fos = openFileOutput(readDay, MODE_NO_LOCALIZED_COLLATORS);
             String content = contextEditText.getText().toString();
             fos.write((content).getBytes());
             fos.close();
+            fos2 = openFileOutput(readDay, MODE_NO_LOCALIZED_COLLATORS);
+            String content2 = contextEditText2.getText().toString();
+            fos2.write((content2).getBytes());
+            fos2.close();
         }
         catch (Exception e)
         {
@@ -272,6 +353,8 @@ public class Calendar extends AppCompatActivity
         }
     }
 }
+
+
 
 
 
