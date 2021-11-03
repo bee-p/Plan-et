@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Planet">
-        <activity android:name=".mainhome" android:exported="true"></activity>
+
           <activity android:name=".splash" android:exported="true" >
 
             <intent-filter>
@@ -21,6 +21,7 @@
 
 
 
+    <activity android:name=".Add_schedule"/>
     </application>
 
 </manifest>

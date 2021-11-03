@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/mainhome_bg"
 
-    tools:context=".main_act">
+    tools:context=".mainhome">
 
     <RelativeLayout
 

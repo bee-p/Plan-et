@@ -1,7 +1,9 @@
 package com.example.plan_et;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -21,7 +23,7 @@ public class mainhome extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity_main.this, Calender.class);
+                Intent intent = new Intent(mainhome.this, Calender.class);
                 startActivity(intent);
             }
         });
