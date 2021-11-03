@@ -146,11 +146,11 @@
             android:layout_height="64dp" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/mainCharacter"
             android:layout_width="215dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/earth" />
+            android:src="@drawable/earth" />
 
         <Space
             android:layout_width="match_parent"
