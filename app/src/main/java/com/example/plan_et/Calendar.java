@@ -1,0 +1,449 @@
+package com.example.plan_et;
+
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CalendarView;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+public class Calendar extends AppCompatActivity
+{
+    public String readDay = null;
+    public String str = null;
+    public String str2 = null;
+    public CalendarView calendarView;
+    public Button cha_Btn, del_Btn, save_Btn;
+    public Button cha_Btn2, del_Btn2, save_Btn2;
+
+
+    public TextView diaryTextView, textView2,textView3 ;
+    public EditText contextEditText,contextEditText2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.calendarhome);
+        calendarView = findViewById(R.id.calendarView);
+        diaryTextView = findViewById(R.id.diaryTextView);
+        save_Btn = findViewById(R.id.save_Btn);
+        del_Btn = findViewById(R.id.del_Btn);
+        cha_Btn = findViewById(R.id.cha_Btn);
+        save_Btn2 = findViewById(R.id.save_Btn2);
+        del_Btn2 = findViewById(R.id.del_Btn2);
+        cha_Btn2 = findViewById(R.id.cha_Btn2);
+
+
+        textView2 = findViewById(R.id.textView2);
+        textView3 = findViewById(R.id.textView3);
+
+
+        contextEditText = findViewById(R.id.contextEditText);
+        contextEditText2 = findViewById(R.id.contextEditText2);
+
+
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener()
+        {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth)
+            {
+                diaryTextView.setVisibility(View.VISIBLE);
+                save_Btn.setVisibility(View.VISIBLE);
+                contextEditText.setVisibility(View.VISIBLE);
+                textView2.setVisibility(View.INVISIBLE);
+                cha_Btn.setVisibility(View.INVISIBLE);
+                del_Btn.setVisibility(View.INVISIBLE);
+                save_Btn2.setVisibility(View.VISIBLE);
+                contextEditText2.setVisibility(View.VISIBLE);
+                textView3.setVisibility(View.INVISIBLE);
+                cha_Btn2.setVisibility(View.INVISIBLE);
+                del_Btn2.setVisibility(View.INVISIBLE);
+                diaryTextView.setText(String.format("%d / %d / %d", year, month + 1, dayOfMonth));
+                contextEditText.setText("");
+                contextEditText2.setText("");
+                checkDay(year, month, dayOfMonth);
+            }
+        });
+        save_Btn.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                saveDiary(readDay);
+                str = contextEditText.getText().toString();
+                textView2.setText(str);
+                save_Btn.setVisibility(View.INVISIBLE);
+                cha_Btn.setVisibility(View.VISIBLE);
+                del_Btn.setVisibility(View.VISIBLE);
+                contextEditText.setVisibility(View.INVISIBLE);
+                textView2.setVisibility(View.VISIBLE);
+
+            }
+        });
+        save_Btn2.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                saveDiary(readDay);
+                str2 = contextEditText2.getText().toString();
+                textView3.setText(str2);
+                save_Btn2.setVisibility(View.INVISIBLE);
+                cha_Btn2.setVisibility(View.VISIBLE);
+                del_Btn2.setVisibility(View.VISIBLE);
+                contextEditText2.setVisibility(View.INVISIBLE);
+                textView3.setVisibility(View.VISIBLE);
+
+            }
+        });
+    }
+
+    public void checkDay(int cYear, int cMonth, int cDay)
+    {
+        readDay = "" + cYear + "-" + (cMonth + 1) + "" + "-" + cDay + ".txt";
+        FileInputStream fis;
+        FileInputStream fis2;
+
+        try
+        {
+            fis = openFileInput(readDay);
+            fis2 = openFileInput(readDay);
+
+            byte[] fileData = new byte[fis.available()];
+            fis.read(fileData);
+            fis.close();
+            byte[] fileData2 = new byte[fis2.available()];
+            fis2.read(fileData2);
+            fis2.close();
+
+            str = new String(fileData);
+            str2 = new String(fileData2);
+
+            contextEditText.setVisibility(View.INVISIBLE);
+            textView2.setVisibility(View.VISIBLE);
+            textView2.setText(str);
+
+            contextEditText2.setVisibility(View.INVISIBLE);
+            textView3.setVisibility(View.VISIBLE);
+            textView3.setText(str2);
+
+            save_Btn.setVisibility(View.INVISIBLE);
+            cha_Btn.setVisibility(View.VISIBLE);
+            del_Btn.setVisibility(View.VISIBLE);
+
+            save_Btn2.setVisibility(View.INVISIBLE);
+            cha_Btn2.setVisibility(View.VISIBLE);
+            del_Btn2.setVisibility(View.VISIBLE);
+
+            cha_Btn.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    contextEditText.setVisibility(View.VISIBLE);
+                    textView2.setVisibility(View.INVISIBLE);
+                    contextEditText.setText(str);
+
+                    save_Btn.setVisibility(View.VISIBLE);
+                    cha_Btn.setVisibility(View.INVISIBLE);
+                    del_Btn.setVisibility(View.INVISIBLE);
+                    textView2.setText(contextEditText.getText());
+                }
+
+            });
+
+
+            cha_Btn2.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    contextEditText2.setVisibility(View.VISIBLE);
+                    textView3.setVisibility(View.INVISIBLE);
+                    contextEditText2.setText(str2);
+
+                    save_Btn2.setVisibility(View.VISIBLE);
+                    cha_Btn2.setVisibility(View.INVISIBLE);
+                    del_Btn2.setVisibility(View.INVISIBLE);
+                    textView3.setText(contextEditText2.getText());
+                }
+
+            });
+
+
+            del_Btn.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    textView2.setVisibility(View.INVISIBLE);
+                    contextEditText.setText("");
+                    contextEditText.setVisibility(View.VISIBLE);
+                    save_Btn.setVisibility(View.VISIBLE);
+                    cha_Btn.setVisibility(View.INVISIBLE);
+                    del_Btn.setVisibility(View.INVISIBLE);
+                    removeDiary(readDay);
+                }
+            });
+
+
+            del_Btn2.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    textView3.setVisibility(View.INVISIBLE);
+                    contextEditText2.setText("");
+                    contextEditText2.setVisibility(View.VISIBLE);
+                    save_Btn2.setVisibility(View.VISIBLE);
+                    cha_Btn2.setVisibility(View.INVISIBLE);
+                    del_Btn2.setVisibility(View.INVISIBLE);
+                    removeDiary(readDay);
+                }
+            });
+
+
+            if (textView2.getText() == null)
+            {
+                textView2.setVisibility(View.INVISIBLE);
+                diaryTextView.setVisibility(View.VISIBLE);
+                save_Btn.setVisibility(View.VISIBLE);
+                cha_Btn.setVisibility(View.INVISIBLE);
+                del_Btn.setVisibility(View.INVISIBLE);
+                contextEditText.setVisibility(View.VISIBLE);
+            }
+            if (textView3.getText() == null)
+            {
+                textView3.setVisibility(View.INVISIBLE);
+                diaryTextView.setVisibility(View.VISIBLE);
+                save_Btn2.setVisibility(View.VISIBLE);
+                cha_Btn2.setVisibility(View.INVISIBLE);
+                del_Btn2.setVisibility(View.INVISIBLE);
+                contextEditText2.setVisibility(View.VISIBLE);
+            }
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    @SuppressLint("WrongConstant")
+    public void removeDiary(String readDay)
+    {
+        FileOutputStream fos;
+        try
+        {
+            fos = openFileOutput(readDay, MODE_NO_LOCALIZED_COLLATORS);
+            String content = "";
+            fos.write((content).getBytes());
+            fos.close();
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    @SuppressLint("WrongConstant")
+    public void saveDiary(String readDay)
+    {
+        FileOutputStream fos;
+        try
+        {
+            fos = openFileOutput(readDay, MODE_NO_LOCALIZED_COLLATORS);
+            String content = contextEditText.getText().toString();
+            fos.write((content).getBytes());
+            fos.close();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+
+
+
+
+//import android.os.Bundle;
+//import androidx.appcompat.app.AppCompatActivity;
+//
+//import android.view.View;
+//import android.widget.Button;
+//
+//import android.content.Intent;
+//
+//
+//public class Calender extends AppCompatActivity {
+//
+//
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.calendarhome);
+////개발자 정보 버튼 클릭시 액티비티 전환
+//        Button add_schehlue = (Button) findViewById(R.id.add_schedule);
+//        add_schehlue.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(), Add_schedule.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+//
+//    }
+//}
+//
+//    public String fname = null;
+//    public String str = null;
+//    public CalendarView calendarView;
+//
+//    public Button cha_Btn, del_Btn, save_Btn;
+//    public TextView diaryTextView, textView2, textView3;
+//    public EditText contextEditText;
+//
+//
+//    @Override
+//    public void onCreate(Bundle savedlnstanceState) {
+//        super.onCreate(savedlnstanceState);
+//        setContentView(R.layout.calenderhome);
+//        calendarView = findViewById(R.id.calendarView);
+//        diaryTextView = findViewById(R.id.diaryTextView);
+//        save_Btn = findViewById(R.id.save_Btn);
+//        del_Btn = findViewById(R.id.del_Btn);
+//        cha_Btn = findViewById(R.id.cha_Btn);
+//        contextEditText = findViewById(R.id.contextEditText);
+//
+//
+//        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+//            @Override
+//            public void onSelectedDayChange(@NonNull CalendarView View, int year, int month, int dayOfMonth) {
+//                diaryTextView.setVisibility(View.VISIBLE);
+//                save_Btn.setVisibility(View.VISIBLE);
+//                contextEditText.setVisibility(View.VISIBLE);
+//                //text2
+//                cha_Btn.setVisibility(View.INVISIBLE);
+//                del_Btn.setVisibility(View.INVISIBLE);
+//                diaryTextView.setText(String.format("%d / %d / %d", year, month + 1, dayOfMonth));
+//                contextEditText.setText("");
+//                checkDay(year, month, dayOfMonth);
+//
+//
+//            }
+//        });
+//        save_Btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                saveDiary(fname);
+//                str = contextEditText.getText().toString();
+//                textView2.setText(str);
+//                save_Btn.setVisibility(View.INVISIBLE);
+//                cha_Btn.setVisibility(View.VISIBLE);
+//                del_Btn.setVisibility(View.VISIBLE);
+//                contextEditText.setVisibility(View.INVISIBLE);
+//                textView2.setVisibility(View.VISIBLE);
+//
+//            }
+//        });
+//    }
+//
+//    public void checkDay(int cYear, int cMonth, int cDay) {
+//        fname = "" + cYear + "-" + (cMonth + 1) + "" + "-" + cDay + ".txt";//저장할 파일 이름설정
+//        FileInputStream fis = null;//FileStream fis 변수
+//
+//        try {
+//            fis = openFileInput(fname);
+//
+//            byte[] fileData = new byte[fis.available()];
+//            fis.read(fileData);
+//            fis.close();
+//
+//            str = new String(fileData);
+//
+//            contextEditText.setVisibility(View.INVISIBLE);
+//            textView2.setVisibility(View.VISIBLE);
+//            textView2.setText(str);
+//
+//            save_Btn.setVisibility(View.INVISIBLE);
+//            cha_Btn.setVisibility(View.VISIBLE);
+//            del_Btn.setVisibility(View.VISIBLE);
+//
+//            cha_Btn.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    contextEditText.setVisibility(View.VISIBLE);
+//                    textView2.setVisibility(View.INVISIBLE);
+//                    contextEditText.setText(str);
+//
+//                    save_Btn.setVisibility(View.VISIBLE);
+//                    cha_Btn.setVisibility(View.INVISIBLE);
+//                    del_Btn.setVisibility(View.INVISIBLE);
+//                    textView2.setText(contextEditText.getText());
+//                }
+//
+//            });
+//            del_Btn.setOnClickListener(view -> {
+//                textView2.setVisibility(View.INVISIBLE);
+//                contextEditText.setText("");
+//                contextEditText.setVisibility(View.VISIBLE);
+//                save_Btn.setVisibility(View.VISIBLE);
+//                cha_Btn.setVisibility(View.INVISIBLE);
+//                del_Btn.setVisibility(View.INVISIBLE);
+//                removeDiary(fname);
+//            });
+//            if (textView2.getText() == null) {
+//                textView2.setVisibility(View.INVISIBLE);
+//                diaryTextView.setVisibility(View.VISIBLE);
+//                save_Btn.setVisibility(View.VISIBLE);
+//                cha_Btn.setVisibility(View.INVISIBLE);
+//                del_Btn.setVisibility(View.INVISIBLE);
+//                contextEditText.setVisibility(View.VISIBLE);
+//            }
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    @SuppressLint("WrongConstant")
+//    public void removeDiary(String readDay) {
+//        FileOutputStream fos = null;
+//
+//        try {
+//            fos = openFileOutput(readDay, MODE_NO_LOCALIZED_COLLATORS);
+//            String content = "";
+//            fos.write((content).getBytes());
+//            fos.close();
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    @SuppressLint("WrongConstant")
+//    public void saveDiary(String readDay) {
+//        FileOutputStream fos = null;
+//
+//        try {
+//            fos = openFileOutput(readDay, MODE_NO_LOCALIZED_COLLATORS);
+//            String content = contextEditText.getText().toString();
+//            fos.write((content).getBytes());
+//            fos.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+//}
