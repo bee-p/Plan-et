@@ -4,6 +4,7 @@ import android.graphics.Matrix;
 import android.os.Bundle;
 import android.content.Intent;
 
+import java.nio.channels.InterruptedByTimeoutException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -22,7 +23,8 @@ import java.util.Locale;
 
 public class Character extends AppCompatActivity {
 
-    private Intent intent = getIntent();    // 데이터 받기 위한 intent
+    private Intent intentGet;    // 데이터 받기 위한 intent
+    private Intent intentPut;    // 데이터 보내기 위한 intent
     private ProgressBar expBar;
     private TextView textViewDate;
     private ImageView charImage;
@@ -45,6 +47,9 @@ public class Character extends AppCompatActivity {
 
         // 캐릭터 이미지 연결
         charImage = (ImageView) findViewById(R.id.mainCharacter);
+
+        // 보내기 intent 설정
+        intentPut = new Intent(this, ChallengeMap.class);
     }
 
     @Override
@@ -53,7 +58,8 @@ public class Character extends AppCompatActivity {
         super.onStart();
 
         // 할 일이 체크(완수)된 수를 받아 그 수만큼 경험치 상승
-
+        // 추후 추가 예정
+        intentGet = getIntent();
 
         // 현재 경험치가 100 이상이라면
         if(expBar.getProgress() >= 100)
@@ -61,6 +67,9 @@ public class Character extends AppCompatActivity {
             // 다음 단계의 캐릭터 이미지로 변경
             charImage.setImageResource(imageList[++imageIndex]);
         }
+
+        // 현재 이미지 (id)데이터 보내기
+        intentPut.putExtra("id", imageList[imageIndex]);
 
 
         // ----- 날짜 ----- \\
