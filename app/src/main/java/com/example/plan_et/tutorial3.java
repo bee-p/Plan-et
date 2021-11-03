@@ -4,10 +4,10 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class tutorial extends AppCompatActivity {
+public class tutorial3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tutorial1);
+        setContentView(R.layout.tutorial3);
     }
 
 

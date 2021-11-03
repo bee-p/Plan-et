@@ -23,7 +23,7 @@ public class mainhome extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mainhome.this, Calender.class);
+                Intent intent = new Intent(mainhome.this, Calendar.class);
                 startActivity(intent);
             }
         });

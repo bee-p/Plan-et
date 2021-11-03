@@ -16,9 +16,13 @@
                  <category android:name="android.intent.category.LAUNCHER"/>
               </intent-filter>
           </activity>
-
+        <activity android:name=".Character"/>
         <activity android:name=".mainhome"/>
-        <activity android:name=".Add_schedule"/>
+        <activity android:name=".Calendar"/>
+        <activity android:name=".tutorial"/>
+        <activity android:name=".tutorial2"/>
+        <activity android:name=".tutorial3"/>
+        <activity android:name=".ChallengeMap"/>
     </application>
 
 </manifest>
