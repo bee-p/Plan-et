@@ -104,8 +104,8 @@ public class Character extends AppCompatActivity {
         SimpleDateFormat yearFormat = new SimpleDateFormat("yyyy", Locale.getDefault());
 
         String year = yearFormat.format(currentTime);
-        String month = yearFormat.format(currentTime);
-        String day = yearFormat.format(currentTime);
+        String month = monthFormat.format(currentTime);
+        String day = dayFormat.format(currentTime);
 
         // 현재 날짜로 텍스트 출력(변경)
         textViewDate.setText("오늘은\n" + year + "년 " + month + "월 " + day + "일 입니다.");
