@@ -75,7 +75,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentBottom="true"
                     android:layout_marginLeft="0dp"
-                    android:layout_marginTop="-20dp"
+                    android:layout_marginTop="-22dp"
                     android:layout_marginBottom="25dp"
 
 
@@ -108,7 +108,9 @@
                         android:id="@+id/space2"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        app:layout_constraintTop_toTopOf="parent">
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        >
 
                     </Space>
 
@@ -138,7 +140,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
-                        android:layout_marginTop="120dp"
+                        android:layout_marginTop="80dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
                         android:gravity="center"
@@ -186,11 +188,12 @@
 
                         android:id="@+id/textView2"
                         android:layout_width="0dp"
-                        android:layout_height="0dp"
+                        android:layout_height="40dp"
                         android:layout_marginStart="70dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginEnd="90dp"
                         android:inputType="textMultiLine"
+                        android:textColor="#000000"
                         android:visibility="invisible"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -225,20 +228,21 @@
                         android:layout_marginEnd="10dp"
 
                         android:background="#00ff0000"
+                        app:layout_constraintBottom_toTopOf="@id/cha_Btn2"
                         app:layout_constraintRight_toLeftOf="@id/contextEditText2"
                         app:layout_constraintTop_toBottomOf="@id/checkbox1"
-                      app:layout_constraintBottom_toTopOf="@id/cha_Btn2"
                         app:srcCompat="@drawable/checkbox_no" />
 
 
                     <TextView
                         android:id="@+id/textView3"
                         android:layout_width="0dp"
-                        android:layout_height="0dp"
+                        android:layout_height="40dp"
                         android:layout_marginStart="70dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginEnd="90dp"
                         android:ems="10"
+                        android:textColor="#000000"
                         android:visibility="invisible"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -268,6 +272,8 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="30dp"
+                        android:background="#F0F0F0"
+
                         android:text="저장"
                         android:visibility="invisible"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -278,12 +284,13 @@
                     <Button
                         android:id="@+id/cha_Btn"
                         android:layout_width="100dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="30dp"
                         android:layout_marginStart="60dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
-
+                        android:background="#F0F0F0"
                         android:text="수정"
+
                         android:visibility="invisible"
 
                         app:layout_constraintEnd_toStartOf="@+id/del_Btn"
@@ -293,8 +300,10 @@
                     <Button
                         android:id="@+id/del_Btn"
                         android:layout_width="100dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="30dp"
                         android:layout_marginEnd="80dp"
+
+                        android:background="#F0F0F0"
 
                         android:text="삭제"
                         android:visibility="invisible"
@@ -313,6 +322,8 @@
                         android:layout_marginEnd="30dp"
                         android:layout_marginRight="8dp"
                         android:layout_marginBottom="0dp"
+                        android:background="#F0F0F0"
+
                         android:text="저장"
                         android:visibility="invisible"
                         app:layout_constraintBottom_toBottomOf="@+id/contextEditText2"
@@ -325,12 +336,13 @@
                     <Button
                         android:id="@+id/cha_Btn2"
                         android:layout_width="100dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="30dp"
                         android:layout_marginStart="60dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
-
+                        android:background="#F0F0F0"
                         android:text="수정"
+
                         android:visibility="invisible"
                         app:layout_constraintEnd_toStartOf="@+id/del_Btn2"
 
@@ -341,8 +353,10 @@
                     <Button
                         android:id="@+id/del_Btn2"
                         android:layout_width="100dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="30dp"
                         android:layout_marginEnd="80dp"
+                        android:background="#F0F0F0"
+
                         android:text="삭제"
                         android:visibility="invisible"
                         app:layout_constraintBaseline_toBaselineOf="@+id/cha_Btn2"
@@ -397,7 +411,7 @@
                     android:layout_height="40dp"
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="65dp"
-                    android:layout_marginTop="825dp"
+                    android:layout_marginTop="725dp"
                     android:ems="10"
                     android:hint="체크리스트"
                     android:inputType="textMultiLine"
@@ -421,7 +435,7 @@
                     android:layout_height="wrap_content"
 
                     android:layout_marginStart="30dp"
-                    android:layout_marginTop="835dp"
+                    android:layout_marginTop="725dp"
                     android:layout_marginEnd="10dp"
 
                     android:background="#00ff0000"
@@ -434,12 +448,11 @@
                     android:layout_height="40dp"
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="65dp"
-                    android:layout_marginTop="870dp"
+                    android:layout_marginTop="790dp"
                     android:ems="10"
                     android:hint="체크리스트"
                     android:inputType="textMultiLine"
-                    android:visibility="invisible"
-                   />
+                    android:visibility="invisible" />
                 <TextView
                     android:id="@+id/checklist_text2"
                     android:layout_width="0dp"
@@ -459,7 +472,7 @@
                     android:layout_height="wrap_content"
 
                     android:layout_marginStart="30dp"
-                    android:layout_marginTop="880dp"
+                    android:layout_marginTop="790dp"
                     android:layout_marginEnd="10dp"
 
                     android:background="#00ff0000"
@@ -513,40 +526,3 @@
 
 </FrameLayout>
 
-
-
-
-
-
-
-
-
-<!--<FrameLayout-->
-<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent">-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical"-->
-
-<!--        >-->
-<!--        -->
-<!--        <ScrollView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent">-->
-<!--            -->
-<!--        <ImageView-->
-<!--            android:id="@+id/imageView2"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            app:srcCompat="@drawable/calenderhome" />-->
-<!--            -->
-<!--        </ScrollView>-->
-
-<!--    </LinearLayout>-->
-
-
-<!--</FrameLayout>-->

@@ -3,16 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/main_home"
+    >
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:srcCompat="@drawable/main_home"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="9dp"
-        android:contentDescription="@string/temp" />
+
 
     <Button
         android:id="@+id/mainhome_ch"

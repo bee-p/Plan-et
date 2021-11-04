@@ -1,7 +1,13 @@
 package com.example.plan_et;
 
+import static android.R.color.black;
+
+import static android.graphics.Color.BLACK;
+
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +25,7 @@ import java.io.FileOutputStream;
 public class Calendar extends AppCompatActivity
 {
     public String readDay = null;
+    public String readDay2=null;
     public String str = null;
     public String str2 = null;
     public String str3 = null;
@@ -146,6 +153,7 @@ public class Calendar extends AppCompatActivity
                 saveDiary(readDay);
                 str = contextEditText.getText().toString();
                 textView2.setText(str);
+
                 save_Btn.setVisibility(View.INVISIBLE);
                 cha_Btn.setVisibility(View.VISIBLE);
                 del_Btn.setVisibility(View.VISIBLE);
@@ -159,9 +167,10 @@ public class Calendar extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                saveDiary(readDay);
+                saveDiary2(readDay2);
                 str2 = contextEditText2.getText().toString();
                 textView3.setText(str2);
+
                 save_Btn2.setVisibility(View.INVISIBLE);
                 cha_Btn2.setVisibility(View.VISIBLE);
                 del_Btn2.setVisibility(View.VISIBLE);
@@ -208,13 +217,15 @@ public class Calendar extends AppCompatActivity
     public void checkDay(int cYear, int cMonth, int cDay)
     {
         readDay = "" + cYear + "-" + (cMonth + 1) + "" + "-" + cDay + ".txt";
+        readDay2 = "" + cYear + "-" + (cMonth + 1) + "" + "-" + cDay + +2+ ".txt";
+
         FileInputStream fis;
         FileInputStream fis2;
 
         try
         {
             fis = openFileInput(readDay);
-            fis2 = openFileInput(readDay);
+            fis2 = openFileInput(readDay2);
 
             byte[] fileData = new byte[fis.available()];
             fis.read(fileData);
@@ -229,13 +240,18 @@ public class Calendar extends AppCompatActivity
             contextEditText.setVisibility(View.INVISIBLE);
             textView2.setVisibility(View.VISIBLE);
             textView2.setText(str);
+            textView2.setTextColor(Color.parseColor("#000000"));
+
+
 
             contextEditText2.setVisibility(View.INVISIBLE);
             textView3.setVisibility(View.VISIBLE);
             textView3.setText(str2);
 
+
             save_Btn.setVisibility(View.INVISIBLE);
             cha_Btn.setVisibility(View.VISIBLE);
+
             del_Btn.setVisibility(View.VISIBLE);
 
             save_Btn2.setVisibility(View.INVISIBLE);
@@ -292,6 +308,15 @@ public class Calendar extends AppCompatActivity
                     removeDiary(readDay);
                 }
             });
+            if (textView2.getText() == null)
+            {
+                textView2.setVisibility(View.INVISIBLE);
+                diaryTextView.setVisibility(View.VISIBLE);
+                save_Btn.setVisibility(View.VISIBLE);
+                cha_Btn.setVisibility(View.INVISIBLE);
+                del_Btn.setVisibility(View.INVISIBLE);
+                contextEditText.setVisibility(View.VISIBLE);
+            }
 
 
             del_Btn2.setOnClickListener(new View.OnClickListener()
@@ -310,15 +335,7 @@ public class Calendar extends AppCompatActivity
             });
 
 
-            if (textView2.getText() == null)
-            {
-                textView2.setVisibility(View.INVISIBLE);
-                diaryTextView.setVisibility(View.VISIBLE);
-                save_Btn.setVisibility(View.VISIBLE);
-                cha_Btn.setVisibility(View.INVISIBLE);
-                del_Btn.setVisibility(View.INVISIBLE);
-                contextEditText.setVisibility(View.VISIBLE);
-            }
+
             if (textView3.getText() == null)
             {
                 textView3.setVisibility(View.INVISIBLE);
@@ -376,14 +393,27 @@ public class Calendar extends AppCompatActivity
     public void saveDiary(String readDay)
     {
         FileOutputStream fos;
-        FileOutputStream fos2;
+
         try
         {
             fos = openFileOutput(readDay, MODE_NO_LOCALIZED_COLLATORS);
             String content = contextEditText.getText().toString();
             fos.write((content).getBytes());
             fos.close();
-            fos2 = openFileOutput(readDay, MODE_NO_LOCALIZED_COLLATORS);
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+    public void saveDiary2(String readDay)
+    {
+
+        FileOutputStream fos2;
+        try
+        {
+            fos2 = openFileOutput(readDay,  MODE_APPEND );
             String content2 = contextEditText2.getText().toString();
             fos2.write((content2).getBytes());
             fos2.close();
