@@ -67,6 +67,9 @@ public class Character extends AppCompatActivity {
         // 경험치 바 연결
         expBar = (ProgressBar) findViewById(R.id.progressBar);
 
+        // 경험치 초기화
+        expBar.setProgress(0);
+
         // 날짜 textView 연결
         textViewDate = (TextView) findViewById(R.id.dateTextView);
 
@@ -83,8 +86,8 @@ public class Character extends AppCompatActivity {
         super.onStart();
 
         // 할 일이 체크(완수)된 수를 받아 그 수만큼 경험치 상승
-        // 추후 추가 예정
         intentGet = getIntent();
+        expBar.incrementProgressBy(intentGet.getIntExtra("exp", 0));
 
         // 현재 경험치가 100 이상이라면
         if(expBar.getProgress() >= 100)
@@ -93,7 +96,7 @@ public class Character extends AppCompatActivity {
             charImage.setImageResource(imageList[++imageIndex]);
         }
 
-        // 현재 이미지 (id)데이터 보내기
+        // 현재 이미지 (id)데이터 챌린지 맵으로 보내기
         intentPut.putExtra("id", imageList[imageIndex]);
 
 

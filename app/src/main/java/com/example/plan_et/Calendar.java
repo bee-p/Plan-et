@@ -31,6 +31,11 @@ public class Calendar extends AppCompatActivity
     public TextView diaryTextView, textView2,textView3 ,checklist_text1,checklist_text2;
     public EditText contextEditText,contextEditText2,checklist1,checklist2;
     public ImageButton button ,button2,button3,button4;
+
+    // 캐릭터 홈으로 정보를 보내기 위한 intent
+    private Intent charIntent;
+    private int count;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -46,13 +51,13 @@ public class Calendar extends AppCompatActivity
                 startActivity(intent);
             }
         });
-        //calendarhome에서 challengehome으로 화면 전환
+        //calendarhome에서 ChallengeMap으로 화면 전환
         Button ch_21button= (Button) findViewById(R.id.ch21_button);
         ch_21button.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(getApplicationContext(),challengehome.class);
+                Intent intent1 = new Intent(getApplicationContext(),ChallengeMap.class);
                 startActivity(intent1);
             }
         });
@@ -89,8 +94,9 @@ public class Calendar extends AppCompatActivity
         checklist_text2 = findViewById(R.id.checklist_text2);
 
 
-
-
+        // 데이터 전송 intent 설정
+        charIntent = new Intent(this, Character.class);
+        count = 0;
 
 
 
@@ -170,14 +176,14 @@ public class Calendar extends AppCompatActivity
 
         public void onClick(View v) {
             button.setBackgroundResource(R.drawable.checkbox_com);
-
+            count++;
         }
     };
     View.OnClickListener imgButtonHandler2 = new View.OnClickListener() {
 
         public void onClick(View v) {
             button2.setBackgroundResource(R.drawable.checkbox_com);
-
+            count++;
         }
     };
 
@@ -186,7 +192,7 @@ public class Calendar extends AppCompatActivity
 
         public void onClick(View v) {
             button3.setBackgroundResource(R.drawable.checkbox_com);
-
+            count++;
         }
     };
 
@@ -194,7 +200,7 @@ public class Calendar extends AppCompatActivity
 
         public void onClick(View v) {
             button4.setBackgroundResource(R.drawable.checkbox_com);
-
+            count++;
         }
     };
 
@@ -329,6 +335,18 @@ public class Calendar extends AppCompatActivity
             e.printStackTrace();
         }
     }
+
+    @Override
+    public void onPause()
+    {
+        super.onPause();
+
+        // 할 일 체크한 값(수량) 캐릭터에 보내기
+        charIntent.putExtra("exp", count);
+        // count 다시 초기화
+        count = 0;
+    }
+
 
     @SuppressLint("WrongConstant")
     public void removeDiary(String readDay)
