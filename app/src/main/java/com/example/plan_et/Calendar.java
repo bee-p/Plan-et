@@ -195,7 +195,7 @@ public class Calendar extends AppCompatActivity
     View.OnClickListener imgButtonHandler = new View.OnClickListener() {
 
         public void onClick(View v) {
-            Button btn = (Button) v;
+            ImageButton btn = (ImageButton) v;
             btn.setBackgroundResource(R.drawable.checkbox_com);
             count++;
         }
