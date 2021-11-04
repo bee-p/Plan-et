@@ -521,6 +521,7 @@
             app:itemTextColor="@drawable/menu_selector_color"
             app:menu="@menu/menu_resource_file" />
 
+
     </RelativeLayout>
 
 

@@ -26,7 +26,7 @@
         <activity android:name=".tutorial2"/>
         <activity android:name=".tutorial3"/>
         <activity android:name=".ChallengeMap"/>
-        <activity android:name=".challengehome"/>
+
     </application>
 
 </manifest>
