@@ -16,9 +16,9 @@ public class ChallengeMap extends AppCompatActivity {
     // 단계별 버튼 배열
     private Button button[] = new Button[21];
     private int buttonID[] = {R.id.button1, R.id.button2, R.id.button3, R.id.button4, R.id.button5,
-                        R.id.button6, R.id.button7, R.id.button8, R.id.button9, R.id.button10,
-                        R.id.button11, R.id.button12, R.id.button13, R.id.button14, R.id.button15,
-                        R.id.button16, R.id.button17, R.id.button18, R.id.button19, R.id.button20, R.id.button21};
+            R.id.button6, R.id.button7, R.id.button8, R.id.button9, R.id.button10,
+            R.id.button11, R.id.button12, R.id.button13, R.id.button14, R.id.button15,
+            R.id.button16, R.id.button17, R.id.button18, R.id.button19, R.id.button20, R.id.button21};
 
     // 캐릭터 이미지
     private ImageView charImage;
@@ -51,7 +51,7 @@ public class ChallengeMap extends AppCompatActivity {
         // 버튼 집어넣기(연결)
         for (int i = 0; i < button.length; i++)
         {
-           button[i] = (Button) findViewById(buttonID[i]);
+            button[i] = (Button) findViewById(buttonID[i]);
         }
 
         // 리스너 생성

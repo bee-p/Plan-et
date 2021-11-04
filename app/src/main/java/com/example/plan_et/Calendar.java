@@ -112,7 +112,7 @@ public class Calendar extends AppCompatActivity
         checklist2 = findViewById(R.id.checklist2);
         checklist_text1= findViewById(R.id.checklist_text1);
         checklist_text2 = findViewById(R.id.checklist_text2);
-        
+
         // 데이터 전송 intent 설정
         charIntent = new Intent(this, Character.class);
         count = 0;
