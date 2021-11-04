@@ -91,8 +91,8 @@ public class Character extends AppCompatActivity {
         intentGet = getIntent();
         expBar.incrementProgressBy(intentGet.getIntExtra("exp", 0));
 
-        // 현재 경험치가 100 이상이라면
-        if(expBar.getProgress() >= 100)
+        // 현재 경험치가 최댓값 이상이라면
+        if(expBar.getProgress() >= expBar.getMax())
         {
             // 다음 단계의 캐릭터 이미지로 변경
             charImage.setImageResource(imageList[++imageIndex]);
