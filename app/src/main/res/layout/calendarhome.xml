@@ -526,6 +526,7 @@
                     android:layout_height="60dp"
                     android:layout_gravity="end" />
             </com.google.android.material.bottomnavigation.BottomNavigationView>
+
         </FrameLayout>
 
     </RelativeLayout>
