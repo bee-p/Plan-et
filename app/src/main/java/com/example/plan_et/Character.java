@@ -13,6 +13,7 @@ import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -78,6 +79,18 @@ public class Character extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intentPut);
+            }
+        });
+
+        // 캐릭터홈에서 캘린더로 전환
+        Button calButton = (Button) findViewById(R.id.goToCal);
+
+        calButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(getApplicationContext(), Calendar.class);
+                startActivity(intent2);
             }
         });
     }
