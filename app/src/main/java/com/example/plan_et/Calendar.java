@@ -43,11 +43,15 @@ public class Calendar extends AppCompatActivity
     private Intent charIntent;
     private int count;
 
+    // bottom쪽 버튼(캐릭터 홈으로 가기)
+    private Button gotoChar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calendarhome);
+
         //Calendarhome에서 mainhome으로 화면 전환
        Button home_button= (Button) findViewById(R.id.home_button);
         home_button.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +62,7 @@ public class Calendar extends AppCompatActivity
                 startActivity(intent);
             }
         });
+
         //calendarhome에서 ChallengeMap으로 화면 전환
         Button ch_21button= (Button) findViewById(R.id.ch21_button);
         ch_21button.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +71,15 @@ public class Calendar extends AppCompatActivity
             public void onClick(View v) {
                 Intent intent1 = new Intent(getApplicationContext(),ChallengeMap.class);
                 startActivity(intent1);
+            }
+        });
+
+        // calendarhome에서 activity_character로 화면 전환
+        gotoChar = (Button) findViewById(R.id.goToChar);
+        gotoChar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(charIntent);
             }
         });
 
@@ -86,15 +100,15 @@ public class Calendar extends AppCompatActivity
         button= (ImageButton)findViewById(R.id.checkbox1);
         button2= (ImageButton)findViewById(R.id.checkbox2);
         button.setOnClickListener(imgButtonHandler);
-        button2.setOnClickListener(imgButtonHandler2);
+        button2.setOnClickListener(imgButtonHandler);
         contextEditText = findViewById(R.id.contextEditText);
         contextEditText2 = findViewById(R.id.contextEditText2);
 
         //체크리스트
         button3= (ImageButton)findViewById(R.id.checklist_checkbox1);
         button4= (ImageButton)findViewById(R.id.checklist_checkbox2);
-        button3.setOnClickListener(imgButtonHandler3);
-        button4.setOnClickListener(imgButtonHandler4);
+        button3.setOnClickListener(imgButtonHandler);
+        button4.setOnClickListener(imgButtonHandler);
         checklist1= findViewById(R.id.checklist1);
         checklist2 = findViewById(R.id.checklist2);
         checklist_text1= findViewById(R.id.checklist_text1);
@@ -104,7 +118,6 @@ public class Calendar extends AppCompatActivity
         // 데이터 전송 intent 설정
         charIntent = new Intent(this, Character.class);
         count = 0;
-
 
 
 
@@ -184,31 +197,8 @@ public class Calendar extends AppCompatActivity
     View.OnClickListener imgButtonHandler = new View.OnClickListener() {
 
         public void onClick(View v) {
-            button.setBackgroundResource(R.drawable.checkbox_com);
-            count++;
-        }
-    };
-    View.OnClickListener imgButtonHandler2 = new View.OnClickListener() {
-
-        public void onClick(View v) {
-            button2.setBackgroundResource(R.drawable.checkbox_com);
-            count++;
-        }
-    };
-
-
-    View.OnClickListener imgButtonHandler3 = new View.OnClickListener() {
-
-        public void onClick(View v) {
-            button3.setBackgroundResource(R.drawable.checkbox_com);
-            count++;
-        }
-    };
-
-    View.OnClickListener imgButtonHandler4 = new View.OnClickListener() {
-
-        public void onClick(View v) {
-            button4.setBackgroundResource(R.drawable.checkbox_com);
+            Button btn = (Button) v;
+            btn.setBackgroundResource(R.drawable.checkbox_com);
             count++;
         }
     };

@@ -152,17 +152,27 @@
             android:layout_gravity="center"
             android:src="@drawable/earth" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="26dp" />
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:theme="@style/Widget.BottomNavigationView"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="parent"
             app:backgroundTint="@color/black"
             app:itemIconTint="@drawable/menu_selector_color"
             app:itemTextColor="@drawable/menu_selector_color"
-            app:menu="@menu/menu_resource_file" />
+            app:menu="@menu/menu_resource_file" >
+
+            <Button
+                android:id="@+id/goToCal"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:background="@android:color/transparent"/>
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
     </LinearLayout>

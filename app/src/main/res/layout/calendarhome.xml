@@ -54,472 +54,479 @@
                 android:background="#00ff0000" />
 
 
-        <ScrollView
+            <ScrollView
 
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="59dp"
-            android:fillViewport="true"
-
-            >
-
-            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginTop="59dp"
+                android:fillViewport="true"
 
+                >
 
-                <ImageView
-                    android:id="@+id/imageView4"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginTop="-22dp"
-                    android:layout_marginBottom="25dp"
+                    android:layout_height="match_parent">
 
 
-                    android:adjustViewBounds="true"
-
-                    android:clipToOutline="true"
-                    app:srcCompat="@drawable/calendar_mid4" />
-
-<!--                <TextView-->
-<!--                    android:id="@+id/today"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-
-<!--                    android:layout_alignParentLeft="true"-->
-<!--                    android:layout_alignParentTop="true"-->
-<!--                    android:layout_marginLeft="45dp"-->
-<!--                    android:layout_marginTop="35dp"-->
-<!--                    android:text="2020년12월11일"-->
-<!--                    android:textColor="#000000"-->
-
-<!--                    android:textSize="20sp" />-->
-
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <Space
-                        android:id="@+id/space2"
+                    <ImageView
+                        android:id="@+id/imageView4"
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="-22dp"
+                        android:layout_marginBottom="25dp"
 
-                        >
 
-                    </Space>
+                        android:adjustViewBounds="true"
 
-                    <CalendarView
-                        android:id="@+id/calendarView"
-                        android:layout_width="wrap_content"
+                        android:clipToOutline="true"
+                        app:srcCompat="@drawable/calendar_mid4" />
+
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/today"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+
+                    <!--                    android:layout_alignParentLeft="true"-->
+                    <!--                    android:layout_alignParentTop="true"-->
+                    <!--                    android:layout_marginLeft="45dp"-->
+                    <!--                    android:layout_marginTop="35dp"-->
+                    <!--                    android:text="2020년12월11일"-->
+                    <!--                    android:textColor="#000000"-->
+
+                    <!--                    android:textSize="20sp" />-->
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
-                        android:maxDate="12/31/2021"
-                        android:minDate="11/01/2021"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.488"
+                        android:orientation="vertical">
 
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/space2"
+                        <Space
+                            android:id="@+id/space2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            app:layout_constraintTop_toTopOf="parent"
 
-                        />
+                            >
+
+                        </Space>
+
+                        <CalendarView
+                            android:id="@+id/calendarView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:maxDate="12/31/2021"
+                            android:minDate="11/01/2021"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.488"
+
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/space2"
+
+                            />
 
 
-                    <TextView
-                        android:id="@+id/diaryTextView"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="80dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
-                        android:gravity="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+                        <TextView
+                            android:id="@+id/diaryTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="80dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:gravity="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+                        <EditText
+                            android:id="@+id/contextEditText"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="90dp"
+                            android:ems="10"
+                            android:hint="일정을 추가하세요"
+                            android:inputType="textMultiLine"
+                            android:visibility="invisible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/diaryTextView" />
+
+
+                        <ImageButton
+
+
+                            android:id="@+id/checkbox1"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="10dp"
+
+                            android:background="#00ff0000"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/contextEditText"
+                            app:layout_constraintTop_toBottomOf="@+id/diaryTextView"
+                            app:srcCompat="@drawable/checkbox_no" />
+
+
+                        <TextView
+
+                            android:id="@+id/textView2"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="90dp"
+                            android:inputType="textMultiLine"
+                            android:textColor="#000000"
+                            android:visibility="invisible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/diaryTextView" />
+
+
+                        <EditText
+                            android:id="@+id/contextEditText2"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="90dp"
+                            android:ems="10"
+                            android:hint="일정을 추가하세요"
+                            android:inputType="textMultiLine"
+                            android:visibility="invisible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cha_Btn" />
+
+                        <ImageButton
+
+
+                            android:id="@+id/checkbox2"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="65dp"
+                            android:layout_marginEnd="10dp"
+
+                            android:background="#00ff0000"
+                            app:layout_constraintBottom_toTopOf="@id/cha_Btn2"
+                            app:layout_constraintRight_toLeftOf="@id/contextEditText2"
+                            app:layout_constraintTop_toBottomOf="@id/checkbox1"
+                            app:srcCompat="@drawable/checkbox_no" />
+
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="90dp"
+                            android:ems="10"
+                            android:textColor="#000000"
+                            android:visibility="invisible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cha_Btn" />
+
+
+                        <!--                    <EditText-->
+                        <!--                        android:id="@+id/contextEditText3"-->
+                        <!--                        android:layout_width="0dp"-->
+                        <!--                        android:layout_height="40dp"-->
+                        <!--                        android:layout_marginStart="70dp"-->
+                        <!--                        android:layout_marginTop="8dp"-->
+                        <!--                        android:layout_marginEnd="90dp"-->
+                        <!--                        android:ems="10"-->
+                        <!--                        android:hint="일정을 추가하세요"-->
+                        <!--                        android:inputType="textMultiLine"-->
+                        <!--                        android:visibility="invisible"-->
+                        <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                        <!--                        app:layout_constraintTop_toBottomOf="@+id/cha_Btn2" />-->
+
+
+                        <Button
+                            android:id="@+id/save_Btn"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="30dp"
+                            android:background="#F0F0F0"
+
+                            android:text="저장"
+                            android:visibility="invisible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/contextEditText"
+                            app:layout_constraintTop_toBottomOf="@+id/diaryTextView" />
+
+
+                        <Button
+                            android:id="@+id/cha_Btn"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="60dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="#F0F0F0"
+                            android:text="수정"
+
+                            android:visibility="invisible"
+
+                            app:layout_constraintEnd_toStartOf="@+id/del_Btn"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/save_Btn" />
+
+                        <Button
+                            android:id="@+id/del_Btn"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="80dp"
+
+                            android:background="#F0F0F0"
+
+                            android:text="삭제"
+                            android:visibility="invisible"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/cha_Btn"
+                            app:layout_constraintEnd_toEndOf="@+id/save_Btn" />
+
+                        //일정추가 2아래 버튼
+
+                        <Button
+                            android:id="@+id/save_Btn2"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="#F0F0F0"
+
+                            android:text="저장"
+                            android:visibility="invisible"
+                            app:layout_constraintBottom_toBottomOf="@+id/contextEditText2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/contextEditText2" />
+
+
+                        //일정추가 3아래 버튼
+
+                        <Button
+                            android:id="@+id/cha_Btn2"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="60dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="#F0F0F0"
+                            android:text="수정"
+
+                            android:visibility="invisible"
+                            app:layout_constraintEnd_toStartOf="@+id/del_Btn2"
+
+                            app:layout_constraintHorizontal_bias="0.586"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/save_Btn2" />
+
+                        <Button
+                            android:id="@+id/del_Btn2"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="80dp"
+                            android:background="#F0F0F0"
+
+                            android:text="삭제"
+                            android:visibility="invisible"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/cha_Btn2"
+                            app:layout_constraintEnd_toEndOf="@+id/save_Btn2" />
+
+                        <!--                    <Button-->
+                        <!--                        android:id="@+id/save_Btn3"-->
+                        <!--                        android:layout_width="0dp"-->
+                        <!--                        android:layout_height="40dp"-->
+                        <!--                        android:layout_marginStart="8dp"-->
+                        <!--                        android:layout_marginLeft="8dp"-->
+                        <!--                        android:layout_marginTop="16dp"-->
+                        <!--                        android:layout_marginEnd="30dp"-->
+                        <!--                        android:layout_marginRight="8dp"-->
+                        <!--                        android:layout_marginBottom="0dp"-->
+                        <!--                        android:text="저장"-->
+                        <!--                        android:visibility="invisible"-->
+                        <!--                        app:layout_constraintBottom_toBottomOf="@+id/contextEditText3"-->
+                        <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--                        app:layout_constraintStart_toEndOf="@+id/contextEditText3" />-->
+
+                        <!--                    <Button-->
+                        <!--                        android:id="@+id/cha_Btn3"-->
+                        <!--                        android:layout_width="180dp"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:layout_marginStart="60dp"-->
+                        <!--                        android:layout_marginLeft="8dp"-->
+                        <!--                        android:layout_marginEnd="8dp"-->
+                        <!--                        android:layout_marginRight="8dp"-->
+                        <!--                        android:text="수정"-->
+                        <!--                        android:visibility="invisible"-->
+                        <!--                        app:layout_constraintEnd_toStartOf="@+id/del_Btn3"-->
+                        <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                        <!--                        app:layout_constraintTop_toBottomOf="@+id/save_Btn3" />-->
+
+                        <!--                    <Button-->
+                        <!--                        android:id="@+id/del_Btn3"-->
+                        <!--                        android:layout_width="176dp"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:layout_marginEnd="8dp"-->
+                        <!--                        android:layout_marginRight="8dp"-->
+                        <!--                        android:text="삭제"-->
+                        <!--                        android:visibility="invisible"-->
+                        <!--                        app:layout_constraintBaseline_toBaselineOf="@+id/cha_Btn3"-->
+                        <!--                        app:layout_constraintEnd_toEndOf="@+id/save_Btn3" />-->
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <EditText
-                        android:id="@+id/contextEditText"
-                        android:layout_width="0dp"
+                        android:id="@+id/checklist1"
+                        android:layout_width="300dp"
                         android:layout_height="40dp"
-                        android:layout_marginStart="70dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="90dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="65dp"
+                        android:layout_marginTop="725dp"
                         android:ems="10"
-                        android:hint="일정을 추가하세요"
+                        android:hint="체크리스트"
                         android:inputType="textMultiLine"
-                        android:visibility="invisible"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/diaryTextView" />
+                        android:visibility="invisible" />
 
+                    <TextView
+                        android:id="@+id/checklist_text1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="65dp"
+                        android:layout_marginTop="825dp"
+                        android:ems="10" />
 
                     <ImageButton
 
 
-                        android:id="@+id/checkbox1"
+                        android:id="@+id/checklist_checkbox1"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="725dp"
                         android:layout_marginEnd="10dp"
 
                         android:background="#00ff0000"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/contextEditText"
-                        app:layout_constraintTop_toBottomOf="@+id/diaryTextView"
+
                         app:srcCompat="@drawable/checkbox_no" />
 
+                    <EditText
+                        android:id="@+id/checklist2"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="65dp"
+                        android:layout_marginTop="790dp"
+                        android:ems="10"
+                        android:hint="체크리스트"
+                        android:inputType="textMultiLine"
+                        android:visibility="invisible" />
 
                     <TextView
-
-                        android:id="@+id/textView2"
+                        android:id="@+id/checklist_text2"
                         android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="70dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="90dp"
-                        android:inputType="textMultiLine"
-                        android:textColor="#000000"
-                        android:visibility="invisible"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/diaryTextView" />
-
-
-                    <EditText
-                        android:id="@+id/contextEditText2"
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="70dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="90dp"
-                        android:ems="10"
-                        android:hint="일정을 추가하세요"
-                        android:inputType="textMultiLine"
-                        android:visibility="invisible"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/cha_Btn" />
+                        android:layout_height="0dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="65dp"
+                        android:layout_marginTop="870dp"
+                        android:ems="10" />
 
                     <ImageButton
 
 
-                        android:id="@+id/checkbox2"
+                        android:id="@+id/checklist_checkbox2"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="65dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="790dp"
                         android:layout_marginEnd="10dp"
 
                         android:background="#00ff0000"
-                        app:layout_constraintBottom_toTopOf="@id/cha_Btn2"
-                        app:layout_constraintRight_toLeftOf="@id/contextEditText2"
-                        app:layout_constraintTop_toBottomOf="@id/checkbox1"
+
                         app:srcCompat="@drawable/checkbox_no" />
 
 
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="70dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="90dp"
-                        android:ems="10"
-                        android:textColor="#000000"
-                        android:visibility="invisible"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/cha_Btn" />
+                    <Button
 
+                        android:id="@+id/add_checklist2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="325dp"
+                        android:layout_marginTop="780dp"
 
-                    <!--                    <EditText-->
-                    <!--                        android:id="@+id/contextEditText3"-->
-                    <!--                        android:layout_width="0dp"-->
-                    <!--                        android:layout_height="40dp"-->
-                    <!--                        android:layout_marginStart="70dp"-->
-                    <!--                        android:layout_marginTop="8dp"-->
-                    <!--                        android:layout_marginEnd="90dp"-->
-                    <!--                        android:ems="10"-->
-                    <!--                        android:hint="일정을 추가하세요"-->
-                    <!--                        android:inputType="textMultiLine"-->
-                    <!--                        android:visibility="invisible"-->
-                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
-                    <!--                        app:layout_constraintStart_toStartOf="parent"-->
-                    <!--                        app:layout_constraintTop_toBottomOf="@+id/cha_Btn2" />-->
-
+                        android:background="#00ff0000" />
 
                     <Button
-                        android:id="@+id/save_Btn"
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="30dp"
-                        android:background="#F0F0F0"
 
-                        android:text="저장"
-                        android:visibility="invisible"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/contextEditText"
-                        app:layout_constraintTop_toBottomOf="@+id/diaryTextView" />
+                        android:id="@+id/add_memo2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="325dp"
+                        android:layout_marginTop="950dp"
+
+                        android:background="#00ff0000" />
 
 
-                    <Button
-                        android:id="@+id/cha_Btn"
-                        android:layout_width="100dp"
-                        android:layout_height="30dp"
-                        android:layout_marginStart="60dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:background="#F0F0F0"
-                        android:text="수정"
+                </RelativeLayout>
 
-                        android:visibility="invisible"
+            </ScrollView>
 
-                        app:layout_constraintEnd_toStartOf="@+id/del_Btn"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/save_Btn" />
-
-                    <Button
-                        android:id="@+id/del_Btn"
-                        android:layout_width="100dp"
-                        android:layout_height="30dp"
-                        android:layout_marginEnd="80dp"
-
-                        android:background="#F0F0F0"
-
-                        android:text="삭제"
-                        android:visibility="invisible"
-                        app:layout_constraintBaseline_toBaselineOf="@+id/cha_Btn"
-                        app:layout_constraintEnd_toEndOf="@+id/save_Btn" />
-
-                    //일정추가 2아래 버튼
-
-                    <Button
-                        android:id="@+id/save_Btn2"
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="30dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginBottom="0dp"
-                        android:background="#F0F0F0"
-
-                        android:text="저장"
-                        android:visibility="invisible"
-                        app:layout_constraintBottom_toBottomOf="@+id/contextEditText2"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/contextEditText2" />
-
-
-                    //일정추가 3아래 버튼
-
-                    <Button
-                        android:id="@+id/cha_Btn2"
-                        android:layout_width="100dp"
-                        android:layout_height="30dp"
-                        android:layout_marginStart="60dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:background="#F0F0F0"
-                        android:text="수정"
-
-                        android:visibility="invisible"
-                        app:layout_constraintEnd_toStartOf="@+id/del_Btn2"
-
-                        app:layout_constraintHorizontal_bias="0.586"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/save_Btn2" />
-
-                    <Button
-                        android:id="@+id/del_Btn2"
-                        android:layout_width="100dp"
-                        android:layout_height="30dp"
-                        android:layout_marginEnd="80dp"
-                        android:background="#F0F0F0"
-
-                        android:text="삭제"
-                        android:visibility="invisible"
-                        app:layout_constraintBaseline_toBaselineOf="@+id/cha_Btn2"
-                        app:layout_constraintEnd_toEndOf="@+id/save_Btn2" />
-
-                    <!--                    <Button-->
-                    <!--                        android:id="@+id/save_Btn3"-->
-                    <!--                        android:layout_width="0dp"-->
-                    <!--                        android:layout_height="40dp"-->
-                    <!--                        android:layout_marginStart="8dp"-->
-                    <!--                        android:layout_marginLeft="8dp"-->
-                    <!--                        android:layout_marginTop="16dp"-->
-                    <!--                        android:layout_marginEnd="30dp"-->
-                    <!--                        android:layout_marginRight="8dp"-->
-                    <!--                        android:layout_marginBottom="0dp"-->
-                    <!--                        android:text="저장"-->
-                    <!--                        android:visibility="invisible"-->
-                    <!--                        app:layout_constraintBottom_toBottomOf="@+id/contextEditText3"-->
-                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
-                    <!--                        app:layout_constraintStart_toEndOf="@+id/contextEditText3" />-->
-
-                    <!--                    <Button-->
-                    <!--                        android:id="@+id/cha_Btn3"-->
-                    <!--                        android:layout_width="180dp"-->
-                    <!--                        android:layout_height="wrap_content"-->
-                    <!--                        android:layout_marginStart="60dp"-->
-                    <!--                        android:layout_marginLeft="8dp"-->
-                    <!--                        android:layout_marginEnd="8dp"-->
-                    <!--                        android:layout_marginRight="8dp"-->
-                    <!--                        android:text="수정"-->
-                    <!--                        android:visibility="invisible"-->
-                    <!--                        app:layout_constraintEnd_toStartOf="@+id/del_Btn3"-->
-                    <!--                        app:layout_constraintStart_toStartOf="parent"-->
-                    <!--                        app:layout_constraintTop_toBottomOf="@+id/save_Btn3" />-->
-
-                    <!--                    <Button-->
-                    <!--                        android:id="@+id/del_Btn3"-->
-                    <!--                        android:layout_width="176dp"-->
-                    <!--                        android:layout_height="wrap_content"-->
-                    <!--                        android:layout_marginEnd="8dp"-->
-                    <!--                        android:layout_marginRight="8dp"-->
-                    <!--                        android:text="삭제"-->
-                    <!--                        android:visibility="invisible"-->
-                    <!--                        app:layout_constraintBaseline_toBaselineOf="@+id/cha_Btn3"-->
-                    <!--                        app:layout_constraintEnd_toEndOf="@+id/save_Btn3" />-->
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <EditText
-                    android:id="@+id/checklist1"
-                    android:layout_width="300dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="65dp"
-                    android:layout_marginTop="725dp"
-                    android:ems="10"
-                    android:hint="체크리스트"
-                    android:inputType="textMultiLine"
-                    android:visibility="invisible" />
-                <TextView
-                    android:id="@+id/checklist_text1"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="65dp"
-                    android:layout_marginTop="825dp"
-                    android:ems="10"
-                    />
-
-                <ImageButton
-
-
-                    android:id="@+id/checklist_checkbox1"
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="725dp"
-                    android:layout_marginEnd="10dp"
-
-                    android:background="#00ff0000"
-
-                    app:srcCompat="@drawable/checkbox_no" />
-
-                <EditText
-                    android:id="@+id/checklist2"
-                    android:layout_width="300dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="65dp"
-                    android:layout_marginTop="790dp"
-                    android:ems="10"
-                    android:hint="체크리스트"
-                    android:inputType="textMultiLine"
-                    android:visibility="invisible" />
-                <TextView
-                    android:id="@+id/checklist_text2"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="65dp"
-                    android:layout_marginTop="870dp"
-                    android:ems="10"
-                    />
-
-                <ImageButton
-
-
-                    android:id="@+id/checklist_checkbox2"
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="790dp"
-                    android:layout_marginEnd="10dp"
-
-                    android:background="#00ff0000"
-
-                    app:srcCompat="@drawable/checkbox_no" />
-
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/calendar_bottomNavi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:theme="@style/Widget.BottomNavigationView"
+                app:backgroundTint="#F0F0F0"
+                app:itemIconTint="@drawable/menu_selector_color"
+                app:itemTextColor="@drawable/menu_selector_color"
+                app:menu="@menu/menu_resource_file" >
 
                 <Button
-
-                    android:id="@+id/add_checklist2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="325dp"
-                    android:layout_marginTop="780dp"
-
-                    android:background="#00ff0000" />
-                <Button
-
-                    android:id="@+id/add_memo2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="325dp"
-                    android:layout_marginTop="950dp"
-
-                    android:background="#00ff0000" />
-
-
-
-
-            </RelativeLayout>
-
-        </ScrollView>
+                    android:id="@+id/goToChar"
+                    android:background="@android:color/transparent"
+                    android:layout_marginRight="65dp"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="end" />
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
         </FrameLayout>
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/calendar_bottomNavi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="0dp"
-            android:theme="@style/Widget.BottomNavigationView"
-            app:backgroundTint="#F0F0F0"
-            app:itemIconTint="@drawable/menu_selector_color"
-            app:itemTextColor="@drawable/menu_selector_color"
-            app:menu="@menu/menu_resource_file" />
 
     </RelativeLayout>
 
