@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/activity_splash_scene">
+    >
 <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        app:srcCompat="@drawable/splash1_img"
+        app:srcCompat="@drawable/splash1"
 
         />
 

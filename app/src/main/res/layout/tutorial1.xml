@@ -1,35 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-       android:contentDescription=" "
-        app:srcCompat="@drawable/tutorial1" />
+        android:contentDescription="@string/_________________string"
+        app:srcCompat="@drawable/tutorial1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-235dp" />
 
     <Button
+        android:id="@+id/tutorial1_startbutton"
         android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="580dp"
-        android:background="#00ff0000"></Button>
+        android:layout_height="80dp"
+        android:layout_marginEnd="28dp"
+        android:background="#00ff0000"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.86" />
 
     <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="373dp"
-        android:layout_marginTop="258dp"
-        android:background="#00ff0000">
+        android:id="@+id/tutorial1_2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="4dp"
+
+        android:background="#00ff0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348">
 
     </Button>
-</FrameLayout>
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

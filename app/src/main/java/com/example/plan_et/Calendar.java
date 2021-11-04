@@ -1,6 +1,7 @@
 package com.example.plan_et;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +36,28 @@ public class Calendar extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calendarhome);
+        //Calendarhome에서 mainhome으로 화면 전환
+       Button home_button= (Button) findViewById(R.id.home_button);
+        home_button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),mainhome.class);
+                startActivity(intent);
+            }
+        });
+        //calendarhome에서 challengehome으로 화면 전환
+        Button ch_21button= (Button) findViewById(R.id.ch21_button);
+        ch_21button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(getApplicationContext(),challengehome.class);
+                startActivity(intent1);
+            }
+        });
+
+
         calendarView = findViewById(R.id.calendarView);
         diaryTextView = findViewById(R.id.diaryTextView);
         save_Btn = findViewById(R.id.save_Btn);

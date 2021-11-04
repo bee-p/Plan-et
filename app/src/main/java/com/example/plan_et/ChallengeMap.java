@@ -28,6 +28,17 @@ public class ChallengeMap extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.challenge_map);
+        //challengeMap에서 character홈으로 화면 전환
+        ImageButton back_button = (ImageButton) findViewById(R.id.back_button);
+        back_button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Character.class);
+                startActivity(intent);
+            }
+        });
+
 
         // 캐릭터 이미지 연결
         charImage = (ImageView) findViewById(R.id.char_image);
