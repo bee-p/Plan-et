@@ -39,30 +39,7 @@ public class Character extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character);
-        //캐릭터홈에서 mainhome으로 전환
-        ImageButton homebutton = (ImageButton) findViewById(R.id.homeButton);
 
-        homebutton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent2 = new Intent(getApplicationContext(),
-                        mainhome.class);
-                startActivity(intent2);
-            }
-        });
-        //캐릭터홈에서 challengemap으로 전환
-        ImageButton challengeButton = (ImageButton) findViewById(R.id.challengeButton);
-
-        challengeButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent2 = new Intent(getApplicationContext(),
-                        ChallengeMap.class);
-                startActivity(intent2);
-            }
-        });
 
         // 경험치 바 연결
         expBar = (ProgressBar) findViewById(R.id.progressBar);
@@ -78,6 +55,31 @@ public class Character extends AppCompatActivity {
 
         // 보내기 intent 설정
         intentPut = new Intent(this, ChallengeMap.class);
+
+
+        //캐릭터홈에서 mainhome으로 전환
+        ImageButton homebutton = (ImageButton) findViewById(R.id.homeButton);
+
+        homebutton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),
+                        mainhome.class);
+                startActivity(intent);
+            }
+        });
+
+        //캐릭터홈에서 challengemap으로 전환
+        ImageButton challengeButton = (ImageButton) findViewById(R.id.challengeButton);
+
+        challengeButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(intentPut);
+            }
+        });
     }
 
     @Override

@@ -43,12 +43,6 @@ public class ChallengeMap extends AppCompatActivity {
         // 캐릭터 이미지 연결
         charImage = (ImageView) findViewById(R.id.char_image);
 
-        // 데이터 수신
-        intent = getIntent();
-
-        // 수신 받은 이미지(현재 캐릭터)로 캐릭터 세팅
-        charImage.setImageResource(intent.getIntExtra("id", 0));
-
         // 버튼 집어넣기(연결)
         for (int i = 0; i < button.length; i++)
         {
@@ -82,5 +76,17 @@ public class ChallengeMap extends AppCompatActivity {
         {
             button[i].setOnClickListener(btnListener);
         }
+    }
+
+    @Override
+    public void onStart()
+    {
+        super.onStart();
+
+        // 데이터 수신
+        intent = getIntent();
+
+        // 수신 받은 이미지(현재 캐릭터)로 캐릭터 세팅
+        charImage.setImageResource(intent.getIntExtra("id", R.drawable.earth_ch));
     }
 }
