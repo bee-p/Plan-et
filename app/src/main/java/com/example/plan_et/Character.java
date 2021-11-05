@@ -102,7 +102,8 @@ public class Character extends AppCompatActivity {
 
         // 할 일이 체크(완수)된 수를 받아 그 수만큼 경험치 상승
         intentGet = getIntent();
-        expBar.incrementProgressBy(intentGet.getIntExtra("exp", 0));
+        int expValue = expBar.getProgress();
+        expBar.setProgress(expValue + intentGet.getIntExtra("exp", 0));
 
         // 현재 경험치가 최댓값 이상이라면
         if(expBar.getProgress() >= expBar.getMax())
