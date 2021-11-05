@@ -11,5 +11,5 @@
         android:id="@+id/item_character"
         android:enabled="true"
         android:icon="@drawable/character_menu"
-        android:title="캐릭터&amp;통계" />
+        android:title="캐릭터" />
 </menu>
