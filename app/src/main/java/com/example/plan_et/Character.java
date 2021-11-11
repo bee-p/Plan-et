@@ -31,6 +31,8 @@ public class Character extends AppCompatActivity {
     private TextView textViewDate;
     private ImageView charImage;
 
+    private Button gotoCal;     // 캘린더로 가는 버튼
+
     // 행성 이미지(id) 배열
     private int imageList[] = {R.drawable.earth_ch, R.drawable.marth_ch,
                                     R.drawable.jupiter_ch, R.drawable.venus_ch, R.drawable.uranus_ch};
@@ -83,9 +85,9 @@ public class Character extends AppCompatActivity {
         });
 
         // 캐릭터홈에서 캘린더로 전환
-        Button calButton = (Button) findViewById(R.id.goToCal);
+        gotoCal = (Button) findViewById(R.id.goToCal);
 
-        calButton.setOnClickListener(new View.OnClickListener() {
+        gotoCal.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {

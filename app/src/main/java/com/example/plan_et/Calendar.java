@@ -79,6 +79,9 @@ public class Calendar extends AppCompatActivity
         gotoChar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // 할 일 체크한 값(수량) 캐릭터에 보내기
+                charIntent.putExtra("exp", count);
+
                 startActivity(charIntent);
             }
         });
@@ -339,17 +342,6 @@ public class Calendar extends AppCompatActivity
         {
             e.printStackTrace();
         }
-    }
-
-    @Override
-    public void onPause()
-    {
-        super.onPause();
-
-        // 할 일 체크한 값(수량) 캐릭터에 보내기
-        charIntent.putExtra("exp", count);
-        // count 다시 초기화
-        count = 0;
     }
 
 

@@ -154,7 +154,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="26dp" />
+            android:layout_height="94dp" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
@@ -169,7 +169,7 @@
             <Button
                 android:id="@+id/goToCal"
                 android:layout_width="110dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginLeft="65dp"
                 android:background="@android:color/transparent"/>
         </com.google.android.material.bottomnavigation.BottomNavigationView>
